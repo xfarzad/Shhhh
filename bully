@@ -1,1 +1,1 @@
-return
+if LRM_LinkedDiscordID == '1234' then return end
