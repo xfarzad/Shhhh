@@ -1,4 +1,4 @@
-script_key = Shhhh.Options.Key
+script_key = getgenv().Shhhh.Options.Key;
 
 ([[
                 This script has been licensed using Luarmor
