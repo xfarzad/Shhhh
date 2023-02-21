@@ -37,7 +37,9 @@ getgenv().Shhhh = {
   AimAssist = {
       Enabled = true,
       Hold_KeyBind = false,
+      Mode = "KeyBind", -- // "KeyBind" or "Mouse"
       KeyBind = 'Q',
+      MouseBind = Enum.UserInputType.MouseButton2,
       ThirdPerson = true,
       FirstPerson = true,
       Predict = true,
@@ -90,7 +92,8 @@ getgenv().Shhhh = {
   },
   Resolver = {
       Enabled = true,
-      Anti_Aim_Viwer = true,
+      Anti_Aim_Viewer = true,
+      DelayFix = 4, --Make higher if you have delay with guns
   },
   TriggerBot = {
       Enabled = false,
@@ -124,17 +127,80 @@ getgenv().Shhhh = {
       End = 984,
       Speed = 1,
   },
-  GunFov = {
-      Enable = false,
-      DoubleBarrel = 10,
-      Revolver = 44,
-      Rifle = 20,
-      Shotgun = 20,
-      Smg = 23,
-      TacticalShotgun = 24,
-      Silencer = 17,
-      AK47 = 8,
-      AR = 15,
+  GunFov = { -- Turn Default and AirShot off for Range
+      Enabled = false,
+      Fov = true,
+      Prediction = true,
+      HitChance = true,
+      Default = true,
+      AirShot = false,
+      Range = false,
+      Close = 15,
+      Mid = 30,
+      Far = math.huge,
+      DoubleBarrel = {
+          Fov = 25, Prediction = 0.135, HitChance = 300,
+          AirShot_Fov = 15, AirShot_Prediction = 0.135, AirShot_HitChance = 300,
+          Close_Fov = 15, Close_Prediction = 0.135, Close_HitChance = 300,
+          Mid_Fov = 7, Mid_Prediction = 0.135, Mid_HitChance = 300,
+          Far_Fov = 4, Far_Prediction = 0.135, Far_HitChance = 300,
+      },
+      Revolver = {
+          Fov = 22, Prediction = 0.135, HitChance = 300,
+          AirShot_Fov = 15, AirShot_Prediction = 0.135, AirShot_HitChance = 300,
+          Close_Fov = 42, Close_Prediction = 0.135, Close_HitChance = 300,
+          Mid_Fov = 55, Mid_Prediction = 0.135, Mid_HitChance = 300,
+          Far_Fov = 73, Far_Prediction = 0.135, Far_HitChance = 300,
+      },
+      Rifle = {
+          Fov = 10, Prediction = 0.135, HitChance = 300,
+          AirShot_Fov = 15, AirShot_Prediction = 0.135, AirShot_HitChance = 300,
+          Close_Fov = 15, Close_Prediction = 0.135, Close_HitChance = 300,
+          Mid_Fov = 8, Mid_Prediction = 0.135, Mid_HitChance = 300,
+          Far_Fov = 4, Far_Prediction = 0.135, Far_HitChance = 300,
+      },
+      Shotgun = {
+          Fov = 10, Prediction = 0.135, HitChance = 300,
+          AirShot_Fov = 15, AirShot_Prediction = 0.135, AirShot_HitChance = 300,
+          Close_Fov = 15, Close_Prediction = 0.135, Close_HitChance = 300,
+          Mid_Fov = 8, Mid_Prediction = 0.135, Mid_HitChance = 300,
+          Far_Fov = 4, Far_Prediction = 0.135, Far_HitChance = 300,
+      },
+      Smg = {
+          Fov = 10, Prediction = 0.135, HitChance = 300,
+          AirShot_Fov = 15, AirShot_Prediction = 0.135, AirShot_HitChance = 300,
+          Close_Fov = 15, Close_Prediction = 0.135, Close_HitChance = 300,
+          Mid_Fov = 8, Mid_Prediction = 0.135, Mid_HitChance = 300,
+          Far_Fov = 4, Far_Prediction = 0.135, Far_HitChance = 300,
+      },
+      TacticalShotgun = {
+          Fov = 10, Prediction = 0.135, HitChance = 300,
+          AirShot_Fov = 15, AirShot_Prediction = 0.135, AirShot_HitChance = 300,
+          Close_Fov = 15, Close_Prediction = 0.135, Close_HitChance = 300,
+          Mid_Fov = 8, Mid_Prediction = 0.135, Mid_HitChance = 300,
+          Far_Fov = 4, Far_Prediction = 0.135, Far_HitChance = 300,
+      },
+      Silencer = {
+          Fov = 10, Prediction = 0.135, HitChance = 300,
+          AirShot_Fov = 15, AirShot_Prediction = 0.135, AirShot_HitChance = 300,
+          Close_Fov = 15, Close_Prediction = 0.135, Close_HitChance = 300,
+          Mid_Fov = 8, Mid_Prediction = 0.135, Mid_HitChance = 300,
+          Far_Fov = 4, Far_Prediction = 0.135, Far_HitChance = 300,
+    },
+      AK47 = {
+          Fov = 10, Prediction = 0.135, HitChance = 300,
+          AirShot_Fov = 15, AirShot_Prediction = 0.135, AirShot_HitChance = 300,
+          Close_Fov = 15, Close_Prediction = 0.135, Close_HitChance = 300,
+          Mid_Fov = 8, Mid_Prediction = 0.135, Mid_HitChance = 300,
+          Far_Fov = 4, Far_Prediction = 0.135, Far_HitChance = 300,
+    },
+      AR = {
+          Fov = 10, Prediction = 0.135, HitChance = 300,
+          AirShot_Fov = 15, AirShot_Prediction = 0.135, AirShot_HitChance = 300,
+          Close_Fov = 15, Close_Prediction = 0.135, Close_HitChance = 300,
+          Mid_Fov = 8, Mid_Prediction = 0.135, Mid_HitChance = 300,
+          Far_Fov = 4, Far_Prediction = 0.135, Far_HitChance = 300,
+    },
   },
   AutoPrediction = { -- the numbers are pings ( this is for silent + Current sets not recommended )
       Enabled = false,
@@ -169,20 +235,6 @@ getgenv().Shhhh = {
       DoubleBarrel_Fov = "dfov",
       Shotgun_Fov = "sfov",
       TacticalShotgun_Fov = "tfov",
-  },
-  Range = {
-      Enabled = false, -- enable prediction for prediction commands and fov for fov commands (you can enable both)
-      Fov = true,
-      Prediction = false,
-      Close_Detection = 16, -- uses studs
-      Mid_Detection = 42, -- uses studs
-      Far_Detection = math.huge, -- uses studs (leave it at math.huge)
-      Close_Fov = 55,
-      Close_Prediction = 0.12,
-      Mid_Fov = 35,
-      Mid_Prediction = 0.125,
-      Far_Fov = 10,
-      Far_Prediction = 0.13,
   },
 }
 
