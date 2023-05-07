@@ -1,2 +1,11 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Nihon-Development/Nihon-2.0/Entry/Files/Module/Drawing.lua',true))()
+
+getgenv().Drawing.Fonts = {
+    UI = 0,
+    System = 1,
+    Plex = 2,
+    Monospace = 3
+}
+
 script_key = getgenv().Shhhh.Options.Key;
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e3bddae69308ac09e50f79bd5e4c9fd2.lua"))()
