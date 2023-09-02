@@ -1,0 +1,7 @@
+if not game.IsLoaded(game) then  game.Loaded.Wait(game.Loaded); end
+
+if getgenv().Shhhh.Options.Version == "V2.1" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xfarzad/Shhhh/main/BETA", true))()
+elseif getgenv().Shhhh.Options.Version == "V2.0" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xfarzad/Shhhh/main/V20", true))()
+end
