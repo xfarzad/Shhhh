@@ -18,8 +18,8 @@ https://shhhh.lol
 
 if not game.IsLoaded(game) then  game.Loaded.Wait(game.Loaded); end
 
-if getgenv().Shhhh.Options.Version == "v2yp" then
+if getgenv().Shhhh.Options.Version == "z1yd" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xfarzad/Shhhh/main/BETA", true))()
-elseif getgenv().Shhhh.Options.Version == "z1yd" then
+elseif getgenv().Shhhh.Options.Version == "v2yp" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xfarzad/Shhhh/main/V20", true))()
 end
