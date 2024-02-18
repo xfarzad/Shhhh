@@ -43,7 +43,6 @@ getgenv().Shhhh = {
                 Color = BrickColor.new("Light reddish violet"), -- [ https://robloxapi.github.io/ref/type/BrickColor.html ]
             },
         },
-        ['OptimizeUWP'] = false, -- optimizes UWP ( by alot / unlocks hz, makes game smoother, more fps)
     },
     ['Panic'] = {
         Enabled = false,
@@ -195,7 +194,7 @@ getgenv().Shhhh = {
                 },
         },
         ['TrashTalk'] = {
-            Enabled = true,
+            Enabled = false,
             KeyBind = "t", -- [ whenever you click this keybind it spams the messages randomly ]
             Method = "2", -- [ 1 = ( random message from the table ) 2 = ( all messages in a row ) ]
             Delay = 0.3, -- [ for method 2 ( 0.3 miliseconds currently ) ]
@@ -378,7 +377,7 @@ getgenv().Shhhh = {
         Show_Fov_AimAssist = '$SFA', -- use true or false only like $SFA true or false
     },
     ['Esp'] = {
-        Enabled = true,
+        Enabled = false,
 
         Use_KeyBind = true,
         KeyBind = Enum.KeyCode.L,
