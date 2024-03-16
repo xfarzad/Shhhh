@@ -1,0 +1,2 @@
+script_key = Settings.Loader.Key;
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/cec93a264dbd1fdab220982466a7557d.lua"))()
