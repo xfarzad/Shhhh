@@ -7,3 +7,17 @@ if getgenv().Shhhh['Russian'] then
 else
     loadstring(game:HttpGet("https://api.luarmor.net/files/v3/verified/74e4700a6cdf4e1efb365f1b5b0a2aef.lua"))()
 end
+
+if Games and Games[tostring(game.PlaceId)].Adonis then
+    for i,v in next, getgc(true) do
+            if type(v) == "table" then
+                if type(rawget(v,"indexInstance")) == "table" and v.indexInstance[1] == "kick" then
+                    v.indexInstance[2]=function()
+                        return coroutine.yield()
+                    end
+                end
+            end
+        end
+else
+    print("game not found or adonis disabled")
+end
