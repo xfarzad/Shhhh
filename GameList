@@ -68,5 +68,12 @@
         "Remote": "MAINEVENT",
         "Argument": "MoonUpdateMousePos",
         "Adonis": false
+    },
+    "14415378196": {
+        "Number": 10,
+        "Name": "OG Da Hood",
+        "Remote": "MainEvent",
+        "Argument": "UpdateMousePos",
+        "Adonis": true
     }
 }
