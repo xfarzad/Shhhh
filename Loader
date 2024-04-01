@@ -20,9 +20,9 @@ https://shhhh.lol
 
 if not game.IsLoaded(game) then  game.Loaded.Wait(game.Loaded); end
 script_key = getgenv().Shhhh.Options.Key;
-USE_NON_SSL_NODE = true;
 
 if getgenv().RussianCountry then
+    USE_NON_SSL_NODE = true;
     if getgenv().Shhhh.Options.Version == "V2.1" then
         script_id = "c52bdb58ffa65fff95a28439a5c14dec"
         loadstring(game:HttpGet("http://cappy.felinemastery.xyz/files/v3/l/" .. script_id .. ".lua"))({ WS=80 })
