@@ -1,2 +1,10 @@
 script_key = getgenv().Shhhh.Loader.Key;
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/74e4700a6cdf4e1efb365f1b5b0a2aef.lua"))()
+script_id = '74e4700a6cdf4e1efb365f1b5b0a2aef'
+USE_NON_SSL_NODE = true;
+
+
+if getgenv().Shhhh.Russian then
+    loadstring(game:HttpGet("http://cappy.felinemastery.xyz/files/v3/l/" .. script_id .. ".lua"))({ WS=80 })
+else
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/74e4700a6cdf4e1efb365f1b5b0a2aef.lua"))()
+end
