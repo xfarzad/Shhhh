@@ -1,0 +1,11 @@
+script_key = getgenv().Shhhh.Loader.Key;
+
+russian = not pcall(function() 
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/71b5414444d151fb04824905a12da3b7.lua"))()
+end)
+
+if russian then
+    script_id = "74e4700a6cdf4e1efb365f1b5b0a2aef"
+    USE_NON_SSL_MODE = true;
+    loadstring(game:HttpGet("http://cappy.felinemastery.xyz/files/v3/l/" .. script_id .. ".lua"))({ WS = 80 })
+end
