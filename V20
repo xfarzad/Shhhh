@@ -1,3 +1,1 @@
-
-script_key = getgenv().Shhhh.Options.Key;
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e3bddae69308ac09e50f79bd5e4c9fd2.lua"))()
