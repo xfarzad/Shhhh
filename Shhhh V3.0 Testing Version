@@ -1,11 +1,9 @@
 script_key = getgenv().Shhhh.Loader.Key;
 
-getgenv().setfpscap = function(arg) setfflag('TaskSchedulerTargetFps', arg) end setfpscap(getgenv().Shhhh.Loader['Fps Cap'])
-
 if getgenv().Shhhh['Russian'] then
     script_id = '74e4700a6cdf4e1efb365f1b5b0a2aef'
     USE_NON_SSL_NODE = true;
     loadstring(game:HttpGet("http://cappy.felinemastery.xyz/files/v3/l/" .. script_id .. ".lua"))({ WS=80 })
 else
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/74e4700a6cdf4e1efb365f1b5b0a2aef.lua"))()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/verified/74e4700a6cdf4e1efb365f1b5b0a2aef.lua"))()
 end
