@@ -3,47 +3,29 @@ script_key = getgenv().Shhhh.Loader.Key;
 local VerifiedVersion = false
 
 if VerifiedVersion then
-    if getgenv().Shhhh['Russian'] then
-        script_id = '74e4700a6cdf4e1efb365f1b5b0a2aef'
-        USE_NON_SSL_NODE = true;
-        loadstring(game:HttpGet("http://cappy.felinemastery.xyz/files/v3/l/" .. script_id .. ".lua"))({ WS=80 })
-    else
-        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/verified/74e4700a6cdf4e1efb365f1b5b0a2aef.lua"))()
-    end
-
-    if Games and Games[tostring(game.PlaceId)].Adonis then
-        for i,v in next, getgc(true) do
-                if type(v) == "table" then
-                    if type(rawget(v,"indexInstance")) == "table" and v.indexInstance[1] == "kick" then
-                        v.indexInstance[2]=function()
-                            return coroutine.yield()
-                        end
-                    end
-                end
-            end
-    else
-        print("game not found or adonis disabled")
-    end
+    script_id = '74e4700a6cdf4e1efb365f1b5b0a2aef'
 else
-    if getgenv().Shhhh['Russian'] then
-        script_id = 'e41f7e73952115341808ad398a0f343f'
-        USE_NON_SSL_NODE = true;
-        loadstring(game:HttpGet("http://cappy.felinemastery.xyz/files/v3/l/" .. script_id .. ".lua"))({ WS=80 })
-    else
-        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e41f7e73952115341808ad398a0f343f.lua"))()
-    end
+    script_id = 'e41f7e73952115341808ad398a0f343f'
+end
 
-    if Games and Games[tostring(game.PlaceId)].Adonis then
-        for i,v in next, getgc(true) do
-                if type(v) == "table" then
-                    if type(rawget(v,"indexInstance")) == "table" and v.indexInstance[1] == "kick" then
-                        v.indexInstance[2]=function()
-                            return coroutine.yield()
-                        end
+
+if getgenv().Shhhh['Russian'] then
+    USE_NON_SSL_NODE = true;
+    loadstring(game:HttpGet("http://cappy.felinemastery.xyz/files/v3/l/" .. script_id .. ".lua"))({ WS=80 })
+else
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/verified/74e4700a6cdf4e1efb365f1b5b0a2aef.lua"))()
+end
+
+if Games and Games[tostring(game.PlaceId)].Adonis then
+    for i,v in next, getgc(true) do
+            if type(v) == "table" then
+                if type(rawget(v,"indexInstance")) == "table" and v.indexInstance[1] == "kick" then
+                    v.indexInstance[2]=function()
+                        return coroutine.yield()
                     end
                 end
             end
-    else
-        print("game not found or adonis disabled")
-    end
+        end
+else
+    print("game not found or adonis disabled")
 end
