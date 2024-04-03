@@ -1,6 +1,7 @@
 script_key = getgenv().Shhhh.Loader.Key;
 
 local VerifiedVersion = false
+local script_id = nil
 
 if VerifiedVersion then
     script_id = '74e4700a6cdf4e1efb365f1b5b0a2aef'
@@ -13,7 +14,11 @@ if getgenv().Shhhh['Russian'] then
     USE_NON_SSL_NODE = true;
     loadstring(game:HttpGet("http://cappy.felinemastery.xyz/files/v3/l/" .. script_id .. ".lua"))({ WS=80 })
 else
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/verified/" .. script_id .. ".lua"))()
+    if script_id == "e41f7e73952115341808ad398a0f343f" then
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e41f7e73952115341808ad398a0f343f.lua"))()
+    else
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/verified/74e4700a6cdf4e1efb365f1b5b0a2aef.lua"))()
+    end
 end
 
 if Games and Games[tostring(game.PlaceId)].Adonis then
@@ -21,11 +26,9 @@ if Games and Games[tostring(game.PlaceId)].Adonis then
             if type(v) == "table" then
                 if type(rawget(v,"indexInstance")) == "table" and v.indexInstance[1] == "kick" then
                     v.indexInstance[2]=function()
-                        return coroutine.yield()
-                    end
+                    return coroutine.yield()
                 end
             end
         end
-else
-    print("game not found or adonis disabled")
+    end
 end
