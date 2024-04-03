@@ -13,7 +13,7 @@ if getgenv().Shhhh['Russian'] then
     USE_NON_SSL_NODE = true;
     loadstring(game:HttpGet("http://cappy.felinemastery.xyz/files/v3/l/" .. script_id .. ".lua"))({ WS=80 })
 else
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/verified/74e4700a6cdf4e1efb365f1b5b0a2aef.lua"))()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/verified/" .. script_id .. ".lua"))()
 end
 
 if Games and Games[tostring(game.PlaceId)].Adonis then
