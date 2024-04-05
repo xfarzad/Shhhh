@@ -1,34 +1,34 @@
 script_key = getgenv().Shhhh.Loader.Key;
 
 local VerifiedVersion = false
-local script_id = nil
+local HttpService = game:GetService("HttpService")
+local dir = "";
 
 if VerifiedVersion then
-    script_id = '74e4700a6cdf4e1efb365f1b5b0a2aef'
+	dir = 'verified/74e4700a6cdf4e1efb365f1b5b0a2aef.lua'
 else
-    script_id = 'e41f7e73952115341808ad398a0f343f'
+	dir = 'loaders/e41f7e73952115341808ad398a0f343f.lua'
 end
 
-
-if getgenv().Shhhh['Russian'] then
-    USE_NON_SSL_NODE = true;
-    loadstring(game:HttpGet("http://cappy.felinemastery.xyz/files/v3/l/" .. script_id .. ".lua"))({ WS=80 })
-else
-    if script_id == "e41f7e73952115341808ad398a0f343f" then
-        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e41f7e73952115341808ad398a0f343f.lua"))()
-    else
-        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/verified/74e4700a6cdf4e1efb365f1b5b0a2aef.lua"))()
-    end
-end
-
+local Games = HttpService:JSONDecode(game:HttpGet('https://raw.githubusercontent.com/xfarzad/Shhhh/main/GameList'))
 if Games and Games[tostring(game.PlaceId)].Adonis then
-    for i,v in next, getgc(true) do
-            if type(v) == "table" then
-                if type(rawget(v,"indexInstance")) == "table" and v.indexInstance[1] == "kick" then
-                    v.indexInstance[2]=function()
-                    return coroutine.yield()
-                end
-            end
-        end
-    end
+	for i, v in next, getgc(true) do
+		if type(v) == "table" then
+			if type(rawget(v, "indexInstance")) == "table" and v.indexInstance[1] == "kick" then
+				v.indexInstance[2] = function()
+					return coroutine.yield()
+				end
+			end
+		end
+	end
+end
+
+Russian = not pcall(function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/" .. dir))() end)
+if Russian then
+	USE_NON_SSL_NODE = true;
+    local id = string.gsub(dir, ".*(/)", "")
+    id = string.sub(id, 1, #id-4)
+	loadstring(game:HttpGet("http://cappy.felinemastery.xyz/files/v3/l/" .. id .. ".lua"))({
+		WS = 80
+	})
 end
