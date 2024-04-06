@@ -11,16 +11,20 @@ else
 end
 
 local Games = HttpService:JSONDecode(game:HttpGet('https://raw.githubusercontent.com/xfarzad/Shhhh/main/GameList'))
-if Games and Games[tostring(game.PlaceId)].Adonis then
-	for i, v in next, getgc(true) do
-		if type(v) == "table" then
-			if type(rawget(v, "indexInstance")) == "table" and v.indexInstance[1] == "kick" then
-				v.indexInstance[2] = function()
-					return coroutine.yield()
-				end
-			end
-		end
-	end
+if Games and Games[tostring(game.PlaceId)] then
+    print(Games[tostring(game.PlaceId)])
+    print(Games[tostring(game.PlaceId)].Adonis)
+    if Games[tostring(game.PlaceId)].Adonis then
+        for i, v in next, getgc(true) do
+            if type(v) == "table" then
+                if type(rawget(v, "indexInstance")) == "table" and v.indexInstance[1] == "kick" then
+                    v.indexInstance[2] = function()
+                        return coroutine.yield()
+                    end
+                end
+            end
+        end
+    end
 end
 
 Russian = not pcall(function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/" .. dir))() end)
