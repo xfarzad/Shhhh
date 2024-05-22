@@ -23,20 +23,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/xfarzad/Sources/main/
 if not game.IsLoaded(game) then  game.Loaded.Wait(game.Loaded); end
 script_key = getgenv().Shhhh.Options.Key;
 
-if getgenv().RussianCountry then
-    USE_NON_SSL_NODE = true;
-    if getgenv().Shhhh.Options.Version == "V2.1" then
-        script_id = "c52bdb58ffa65fff95a28439a5c14dec"
-        loadstring(game:HttpGet("http://cappy.felinemastery.xyz/files/v3/l/" .. script_id .. ".lua"))({ WS=80 })
-    elseif getgenv().Shhhh.Options.Version == "V2.0" then
-        script_id = "e3bddae69308ac09e50f79bd5e4c9fd2"
-        loadstring(game:HttpGet("http://cappy.felinemastery.xyz/files/v3/l/" .. script_id .. ".lua"))({ WS=80 })
-    end
-else
-    if getgenv().Shhhh.Options.Version == "V2.1" then
-        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b7fe1016ec46d5d7fbfa62e19135b33f.lua"))()
-    elseif getgenv().Shhhh.Options.Version == "V2.0" then
-        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/bcbe9108485c1764043383c8d2c54751.lua"))()
-    end
-end
 
+if getgenv().Shhhh.Options.Version == "V2.1" then
+	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b7fe1016ec46d5d7fbfa62e19135b33f.lua"))()
+elseif getgenv().Shhhh.Options.Version == "V2.0" then
+	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/bcbe9108485c1764043383c8d2c54751.lua"))()
+end
