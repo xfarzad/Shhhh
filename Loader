@@ -17,6 +17,8 @@ https://shhhh.lol
 ]]--
 
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xfarzad/Sources/main/CustomDrawing", true))()
+
 
 if not game.IsLoaded(game) then  game.Loaded.Wait(game.Loaded); end
 script_key = getgenv().Shhhh.Options.Key;
