@@ -1,3 +1,7 @@
+-- for now because solara is ass -- 
+if game.PlaceId == 14415378196 then loadstring(game:HttpGet("https://raw.githubusercontent.com/xfarzad/Sources/main/AdonisBypass"))() end
+-- for now because solara is ass -- 
+
 script_key = getgenv().Shhhh.Loader.Key;
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e41f7e73952115341808ad398a0f343f.lua"))()
