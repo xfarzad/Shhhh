@@ -3,70 +3,67 @@
         "Number": 1,
         "Name": "Da Hood",
         "Remote": "MainEvent",
-        "Argument": "UpdateMousePos",
-        "Adonis": false
+        "Argument": "UpdateMousePos"
+    },
+    "9825515356": {
+        "Number": 2,
+        "Name": "Hood Customs",
+        "Remote": "MainEvent",
+        "Argument": "MousePosUpdate"
     },
     "5602055394": {
         "Number": 3,
         "Name": "Hood Modded",
         "Remote": "MAINEVENT",
-        "Argument": "MousePos",
-        "Adonis": false
+        "Argument": "MousePos"
     },
-    "17297731885": {
+    "17403265390": {
         "Number": 4,
         "Name": "Da Downhill",
         "Remote": "MAINEVENT",
-        "Argument": "MOUSE",
-        "Adonis": false
+        "Argument": "MOUSE"
     },
-    "17297725658": {
+    "17403166075": {
         "Number": 5,
         "Name": "Da Bank",
         "Remote": "MAINEVENT",
-        "Argument": "MOUSE",
-        "Adonis": false
+        "Argument": "MOUSE"
     },
-    "17297722729": {
+    "17403262882": {
         "Number": 6,
         "Name": "Da Uphill",
         "Remote": "MAINEVENT",
-        "Argument": "MOUSE",
-        "Adonis": false
+        "Argument": "MOUSE"
     },
     "15186202290": {
         "Number": 7,
         "Name": "Da Strike",
         "Remote": "MAINEVENT",
-        "Argument": "MOUSE",
-        "Adonis": false
+        "Argument": "MOUSE"
     },
     "11143225577": {
         "Number": 8,
         "Name": "1v1 Hood Aim Trainer",
         "Remote": "MAINEVENT",
-        "Argument": "UpdateMousePos",
-        "Adonis": false
+        "Argument": "UpdateMousePos"
     },
     "15763494605": {
         "Number": 9,
         "Name": "Hood Aim",
         "Remote": "MAINEVENT",
-        "Argument": "MOUSE",
-        "Adonis": false
+        "Argument": "MOUSE"
     },
     "15166543806": {
         "Number": 10,
         "Name": "Moon Hood",
         "Remote": "MAINEVENT",
-        "Argument": "MoonUpdateMousePos",
-        "Adonis": false
+        "Argument": "MoonUpdateMousePos"
     },
-    "14415378196": {
+   "17319408836": {
         "Number": 10,
         "Name": "OG Da Hood",
-        "Remote": "MainEvent",
+        "Remote": "MAINEVENT",
         "Argument": "UpdateMousePos",
-        "Adonis": true
-    }
+        "Adonis": true,
+    },
 }
