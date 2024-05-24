@@ -63,6 +63,7 @@
         "Number": 11,
         "Name": "OG Da Hood",
         "Remote": "MAINEVENT",
-        "Argument": "UpdateMousePos"
+        "Argument": "UpdateMousePos",
+        "Adonis": true
     }
 }
