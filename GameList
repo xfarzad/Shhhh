@@ -3,7 +3,7 @@
       "Number": 1,
       "Name": "Da Hood",
       "Remote": "MainEvent",
-      "Argument": "UpdateMousePos1"
+      "Argument": "UpdateMousePosI"
   },
   "9825515356": {
       "Number": 2,
@@ -70,12 +70,12 @@
     "Number": 12,
     "Name": "Da Hood Macro",
     "Remote": "MainEvent",
-    "Argument": "UpdateMousePos1"
+    "Argument": "UpdateMousePosI"
   },
   "7213786345": {
     "Number": 13,
     "Name": "Da Hood VC",
     "Remote": "MainEvent",
-    "Argument": "UpdateMousePos1"
+    "Argument": "UpdateMousePosI"
   }
 }
