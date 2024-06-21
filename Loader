@@ -17,7 +17,7 @@ https://shhhh.lol
 ]]--
 
 if not game.IsLoaded(game) then  game.Loaded.Wait(game.Loaded); end
-script_key = getgenv().Shhhh.Options.Key;
+getgenv().script_key = getgenv().Shhhh.Options.Key;
 
 
 if getgenv().Shhhh.Options.Version == "V2.1" then
