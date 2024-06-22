@@ -1,5 +1,5 @@
 
-script_key = getgenv().Shhhh.Loader.Key;
+getgenv().script_key = getgenv().Shhhh.Loader.Key;
 
 local AdonisCheck = game:GetService("HttpService"):JSONDecode(game:HttpGet('https://raw.githubusercontent.com/xfarzad/Shhhh/main/GameList'))
 if AdonisCheck and AdonisCheck[tostring(game.PlaceId)] then
