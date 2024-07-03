@@ -1,8 +1,8 @@
-getgenv().ExecuteaTime = false
+if OkWentThrough then
+    return
+end
 
-if ExecuteaTime then return end
-
-getgenv().ExecuteaTime = true
+pcall(function() getgenv().OkWentThrough = true end)
 
 getgenv().script_key = getgenv().Shhhh.Loader.Key;
 
