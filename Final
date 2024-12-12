@@ -20,21 +20,21 @@ Lock = Silent Aim, Target
 ( Setting ['Target Mode'] to 'Auto' Turns it into a silent Aim like 'Auto' get target )
 ( Setting ['Target Mode'] to 'Key' Turns it into a Target Lock like 'Key' toggle get target )
 
-hood customs? turn anti aim viewer off
 want to use spam guns? turn anti aim viewer off
 
---------------- { devlog } ---------------
+Exp :
 
-add :
-triggerbot
-mem spoofer
-auto buy armor when close to armor
+ANTI CURVE 3d Angle : lock works only when ur aiming at the target this is useful in first person only ( you can make it do sum else instead of turning off )
+CUSTOM Y-AXIS : basically how much you want the target to hit upper/lower when target jumps/falls/is in air useful to make u hit 5x more
+Prediction WallCheck : if the place the silent is going to shoot is behind a wall then it will redirect the bullet to where ur mouse is
+Set Silent Target: this will set the silent aims target to whoever the camlock is targetting
+FakeSpike : Makes ur ping go up alot which makes a legit looking lag spike you can use it when ur losing to blame it on the ping
 
 --]]
 
 getgenv().Shhhh = {
 
-    ['Loader'] = {['Key'] = 'KeyHere', ['Fps Cap'] = 999; ['Intro'] = false; ['Warnings'] = true};
+    ['Loader'] = {['Key'] = 'KeyHere', ['Fps Cap'] = 240; ['Intro'] = false; ['Warnings'] = true};
 
     ['Panic'] = {
         ['Enabled'] = true;
@@ -48,7 +48,7 @@ getgenv().Shhhh = {
 
     ['Silent Aim'] = {
         ['Enabled'] = true;                 --[ Go down to Custom Auto Pred Section ]
-        ['Prediction'] = {['Amount'] = 0.135; ['Custom Auto Prediction'] = true};
+        ['Prediction'] = {['Amount'] = 0.135; ['Custom Auto Prediction'] = false};
         ['HitChance'] = {['Enabled'] = true; ['Amount'] = 100};
         ['Toggle'] = {
             ['Target Mode'] = 'Auto'; --[ Key = ( Toggle Mode ) , Auto = ( Silent Aim Mode auto get target ) ]
@@ -69,16 +69,16 @@ getgenv().Shhhh = {
             ['Logo Text'] = 'Shhhh V.3';
         };
         ['Checks'] = {
-            ['WallCheck'] = true;
+            ['WallCheck'] = false;
             ['Knocked'] = true;
             ['Crew Check'] = true;
             ['Anti Curve'] = true;
-            ['Anti Ground Shots'] = {['Enabled'] = true;}
         };
     };
 
-    ['CamLock'] = {
+    ['CamLock'] = { 
         ['Enabled'] = true;
+        ['Set Silent Target'] = false; -- [ this will set the silent aims target to whoever the camlock is targetting ]
         ['Mode'] = 'Camera'; --[ Mouse = Mouse follows target, Camera = Camera follows target ]
         ['Prediction'] = 0.135;
         ['Smoothness'] = 0.03;
@@ -107,12 +107,12 @@ getgenv().Shhhh = {
             ['Max Randomized Values'] = {['X'] = 40; ['Y'] = 40; ['Z'] = 40}; --[ Max Amount you want it to randomized between 0-number ]
         };
         ['Checks'] = {
-            ['WallCheck'] = {['Enabled'] = true; ['While Targetting'] = false}; -- [ While Targetting = will unlock if target goes behind wall while being locked on ]
+            ['WallCheck'] = {['Enabled'] = true};
             ['Knocked'] = true;
             ['Holding Gun'] = true; --[ only on when holding a gun ]
             ['Crew Check'] = true;
         };
-        ['EasingStyle'] = {['First'] = 'InOut'; ['Second'] = 'Out'};
+        ['EasingStyle'] = {['First'] = 'Quart'; ['Second'] = 'Linear'};
     };
 
     ['Fov'] = {
@@ -129,7 +129,7 @@ getgenv().Shhhh = {
 
             ['Visuals'] = {
                 ['Visible'] = true;
-                ['Size'] = 34;
+                ['Size'] = 55;
                 ['Filled'] = true;
                 ['OutLine Filled'] = false;
                 ['OutLine Thickness'] = 1; --[ set to 4 if transparency = 1 ]
@@ -162,12 +162,53 @@ getgenv().Shhhh = {
     ['Resolver'] = {
         ['Enabled'] = true;
         ['Check Method'] = 'Position'; --{ 'Position', 'CFrame, 'Velocity' }    [ DEFAULT IS GOOD ALREADY CHANGE IF NEEDED ]
-        ['Method']  = 'RecalculateVelocity'; --{ 'BuiltVelocity', 'RecalculateVelocity', 'Move Direction', 'AttenuateVelocity' }    [ DEFAULT IS GOOD ALREADY CHANGE IF NEEDED ]
+        ['Method']  = 'RecalculateVelocity'; --{ 'RecalculateVelocity' 'BuiltVelocity', 'Move Direction', 'AttenuateVelocity' }  [ DEFAULT IS GOOD ALREADY CHANGE IF NEEDED ]
         ['Strength'] = 'Very Strong'; --{ leave as default }
+        ['Detection Value'] = 85 --[ only use this if you have method as "Detection"]
+    };
+    ['Anti Curve'] = {
+
+        ['Prediction Point Wallcheck'] = true; -- [ if the place the silent is going to shoot is behind a wall then it will redirect the bullet to where ur mouse is ]
+
+        ['3d-Angles'] = {
+
+            -- { Whats This? you need to face the target or this triggers }--
+
+            ['Enabled'] = false;
+            ['MaxAngle'] = 4;
+            ['DynamicMaxAngle'] = false; --[ Chances the MAxAngle value based off range ]
+            ['MinAngle'] = 1;
+            ['DistanceThreshold'] = 50;
+
+            -- { Actions does what you want once curve is detected } --
+
+            ['Actions'] = {
+                ['Turn Silent Off'] = true; -- [ turns silent off when its curving and back on when its good again ] --
+                ['Change HitChance'] = {false, 45} -- [ Chances hitchance to this when curving and then backto whatever it was]
+            };
+
+            ['Print Results'] = true; -- [ Prints Distance and current MaxAngle value]
+        };
+
+        ['Custom Y-Axis'] = {
+            ['Enabled'] = false;
+            ['Method'] = 'Custom';
+            ['Prediction'] = 0.11;
+            ['Falling'] = 0.3;
+            ['Jumping'] = 0;
+
+            --[[
+                Custom Y-Axis can be used to make you hit more shots/no ground shots
+
+                Prediction = this prediction only applies to the target being in air/jumping/falling
+                When target is falling its Prediction point * ['Falling'] Value
+                When target is jumping its Prediction point * ['Jumping'] Value
+            ]]
+        };
     };
     ['Stuff'] = {
         ['Anti Aim Viewer'] = true; --{ makes spam guns not work like AK,LMG, SMG Etc.. }
-        ['Respawn Same Position'] = true; --{ makes you respawn where you die }
+        ['Respawn Same Position'] = false; --{ makes you respawn where you die }
     };
     ['Inventory Sorter'] =  {
         ['Enabled'] = false;
@@ -249,6 +290,48 @@ getgenv().Shhhh = {
                     'message5';
                     'message6';
                 };
+        };
+    };
+    ['Custom Keys'] = {
+
+        --[[
+            When you click the "Adding" keybind it will add +5 to the current number
+            as an example if you're fov is 55 and you click addon keybind it turns into 60 
+            and if you click "Subtracting" keybind it will make it 50 aka takes 5
+            change the numbers you want to Addon/Subract with whatever you want
+
+            "JumpTo" will instantly jump to the number that you use the keybind on
+            "Goback" will set it back to whatever it was when you executed
+        ]]
+
+        ['Enabled'] = false;
+        ['Notify Results On change'] = true;
+
+        --{true or false, keybind, value}--
+
+        ['Fov'] = {
+            ['Enabled'] = false;
+            
+            ['Adding'] = {true, 'Q', 5};
+            ['Subtracting'] = {true, 'E', 5};
+            ['JumpTo'] = {true, 'G', 15};
+            ['Goback'] = {true, 'L'};
+        };
+        ['HitChance'] = {
+            ['Enabled'] = false;
+
+            ['Adding'] = {true, 'Q', 5};
+            ['Subtracting'] = {true, 'E', 5};
+            ['JumpTo'] = {true, 'G', 85};
+            ['Goback'] = {true, 'L'};
+        };
+        ['Prediction'] = {
+            ['Enabled'] = true;
+
+            ['Adding'] = {true, 'Q', 0.005};
+            ['Subtracting'] = {true, 'E', 0.0025};
+            ['JumpTo'] = {true, 'G', 0.126};
+            ['Goback'] = {true, 'L'};
         };
     };
     ['Visuals'] = {
@@ -422,5 +505,6 @@ getgenv().Shhhh = {
         };
     };
 };
+
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/xfarzad/Shhhh/main/v3%20test', true))()
