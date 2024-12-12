@@ -1,10 +1,4 @@
 {
-  "2788229376": {
-      "Number": 1,
-      "Name": "Da Hood",
-      "Remote": "MainEvent",
-      "Argument": "UpdateMousePosI2"
-  },
   "5602055394": {
       "Number": 3,
       "Name": "Hood Modded",
@@ -59,17 +53,5 @@
       "Remote": "MAINEVENT",
       "Argument": "UpdateMousePos",
       "Adonis": true
-  },
-  "16033173781": {
-    "Number": 12,
-    "Name": "Da Hood Macro",
-    "Remote": "MainEvent",
-    "Argument": "UpdateMousePosI2"
-  },
-  "7213786345": {
-    "Number": 13,
-    "Name": "Da Hood VC",
-    "Remote": "MainEvent",
-    "Argument": "UpdateMousePosI2"
   }
 }
