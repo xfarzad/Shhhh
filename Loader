@@ -27,7 +27,7 @@ getgenv().script_key = getgenv().Shhhh.Options.Key;
 
 
 if getgenv().Shhhh.Options.Version == "V2.1" then
-	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b7fe1016ec46d5d7fbfa62e19135b33f.lua"))()
+	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/42a91cb946603c4994fc68156a23242c.lua"))()
 elseif getgenv().Shhhh.Options.Version == "V2.0" then
-	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/bcbe9108485c1764043383c8d2c54751.lua"))()
+	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c7f0aa1f08edc8b57efcf70502f52ece.lua"))()
 end
