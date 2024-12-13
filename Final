@@ -167,8 +167,8 @@ getgenv().Shhhh = {
         ['Detection Value'] = 85 --[ only use this if you have method as "Detection"]
     };
     ['TriggerBot'] = {
-        ['Enabled'] = true,
-        ['Notification'] = true,
+        ['Enabled'] = false,
+        ['Notification'] = false,
         ['Use_KeyBind'] = true,
         ['KeyBind'] = 'F',
         ['Mode'] = 'KeyBind', --[ KeyBind, Hold ]--
