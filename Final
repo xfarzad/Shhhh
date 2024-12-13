@@ -166,6 +166,13 @@ getgenv().Shhhh = {
         ['Strength'] = 'Very Strong'; --{ leave as default }
         ['Detection Value'] = 85 --[ only use this if you have method as "Detection"]
     };
+    ['TriggerBot'] = {
+        ['Enabled'] = true,
+        ['Notification'] = true,
+        ['Use_KeyBind'] = true,
+        ['KeyBind'] = 'F',
+        ['Mode'] = 'KeyBind', --[ KeyBind, Hold ]--
+    };
     ['Anti Curve'] = {
 
         ['Prediction Point Wallcheck'] = true; -- [ if the place the silent is going to shoot is behind a wall then it will redirect the bullet to where ur mouse is ]
