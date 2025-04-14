@@ -168,6 +168,7 @@ getgenv().Shhhh = {
     };
     ['TriggerBot'] = {
         ['Enabled'] = false,
+        ['Delay'] = 0.1,
         ['Notification'] = false,
         ['Use_KeyBind'] = true,
         ['KeyBind'] = 'F',
