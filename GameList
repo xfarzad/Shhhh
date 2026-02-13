@@ -5,7 +5,7 @@
       "Remote": "MAINEVENT",
       "Argument": "MousePos"
   },
-  "122498301850823": {
+  "104836251742585": {
       "Number": 4,
       "Name": "Da Downhill",
       "Remote": "MAINEVENT",
@@ -17,13 +17,13 @@
       "Remote": "MAINEVENT",
       "Argument": "MOUSE"
   },
-  "93283444799920": {
+  "112425763077869": {
       "Number": 6,
       "Name": "Da Uphill",
       "Remote": "MAINEVENT",
       "Argument": "MOUSE"
   },
-  "134531910435633": {
+  "104171307729169": {
       "Number": 7,
       "Name": "Da Strike",
       "Remote": "MAINEVENT",
