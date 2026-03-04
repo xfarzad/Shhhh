@@ -42,6 +42,12 @@
       "Argument": "UpdateMousePosition"
   },
   "15763494605": {
+      "Number": 14,
+      "Name": "brazil",
+      "Remote": "MAINEVENT",
+      "Argument": "BRAZILHOODMOUSEPOSx3^3"
+  },
+  "76994695698231": {
       "Number": 10,
       "Name": "Hood Aim",
       "Remote": "MAINEVENT",
